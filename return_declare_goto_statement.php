@@ -1,7 +1,7 @@
 <?php
 /**return / declare / goto */
 
-//
+declare(strict_types=1);
 
 // declare -ticks
 function onTick(){
@@ -25,7 +25,6 @@ while($i<$length){
 /** the strick_types declare only apply to the currenty file, 
  * won't apply to system or other files even the strick_types has been included or requred */
 
-declare(strict_types=1);
 function sum (float $a, float $b){
     return $a+$b;
 }
