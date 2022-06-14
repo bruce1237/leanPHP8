@@ -2,7 +2,8 @@
     "name": "bo/learn-php8",
     "autoload": {
         "psr-4": {
-            "Bo\\LearnPhp8\\": "src/"
+            "app\\": "src/app/",
+            "lib\\": "src/lib/"
         }
     },
     "require": {}
