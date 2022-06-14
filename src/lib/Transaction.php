@@ -16,7 +16,6 @@ class Transaction{
         var_dump($transactionStatus->name);
         // var_dump($transactionStatus->tryFrom());
         var_dump($transactionStatus->value);
-        die('cc');
         return $this->status = $transactionStatus->name;    
     }
 }

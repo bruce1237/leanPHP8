@@ -4,6 +4,8 @@ namespace app;
 include __DIR__.'/../../vendor/autoload.php';
 
 use lib\Profile;
+use lib\StaticClassA;
+use lib\StaticClassB;
 use lib\Transaction;
 use lib\TransactionStatus;
 
@@ -13,3 +15,15 @@ echo $profile->getProfile();
 $transaction = new Transaction();
 echo $transaction->getTransaction();
 echo $transaction->setStatus(TransactionStatus::Paid);
+
+echo '-----------'.PHP_EOL;
+
+$a = new StaticClassA();
+$b = new StaticClassB();
+echo $a->getName().PHP_EOL;
+echo $b->getName().PHP_EOL;
+
+$a = StaticClassA::make();
+var_dump($a);
+$b = StaticClassB::make();
+var_dump($b);
