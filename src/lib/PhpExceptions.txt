@@ -1,0 +1,13 @@
+BadFunctionCallException
+BadMethodCallException
+DomainException
+InvalidArgumentException
+LengthExceptioon
+LogicException
+OutOfBoundsException
+OutofRangeException
+OverflowException
+RangeException
+RuntimeException
+UnderflowException
+UnexpectedValueException
