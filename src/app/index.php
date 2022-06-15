@@ -3,6 +3,8 @@ namespace app;
 
 include __DIR__.'/../../vendor/autoload.php';
 
+use lib\ClassIterator\Invoice;
+use lib\ClassIterator\InvoiceCollection;
 use lib\Profile;
 use lib\StaticClassA;
 use lib\StaticClassB;
@@ -46,3 +48,10 @@ echo 'C: '.$c->amount.', D: '.$d->amount.PHP_EOL;
 
 $d->amount=400;
 echo 'C: '.$c->amount.', D: '.$d->amount.PHP_EOL;
+
+
+$invoiceCollection = new InvoiceCollection ([new Invoice(15), new Invoice(20), new Invoice(30)]);
+
+foreach($invoiceCollection as $invoice){
+    echo $invoice->id .' - '.$invoice->amount.PHP_EOL;
+}
