@@ -23,6 +23,7 @@ class InvoiceService{
      */
     public function process(array $customer, float $amount):bool
     {
+        echo __CLASS__." Process";
           //1. calculate sales tax
           $tax = $this->salesTaxService->calculate($customer, $amount);
 
