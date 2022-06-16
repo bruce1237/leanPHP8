@@ -1,0 +1,13 @@
+{
+    "name": "bo/learn-php8",
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "sun bo",
+        "email": "sunbohouse@gmail.com"
+    }],
+    "require": {}
+}
