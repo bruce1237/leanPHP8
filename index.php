@@ -1,3 +1,8 @@
 <?php
-//URL: http://learnphp8.com/index.php
-phpinfo();
+
+use example\GeneratorExample;
+
+include './vendor/autoload.php';
+
+$generatorEx = new GeneratorExample();
+$generatorEx->index();
