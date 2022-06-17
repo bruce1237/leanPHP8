@@ -1,24 +1,28 @@
 <?php
 
-use lib\Invoice;
+use lib\ArrayUnpacking;
+use lib\ClassIterator\Invoice;
+use lib\Customer;
+use lib\FinalConstant\InvoiceQuery;
+use lib\NewCustomer;
 
 include "./vendor/autoload.php";
 
-$invoice1 = New Invoice();
-// $invoice2 = $invoice1;
+$unpacking = new ArrayUnpacking();
 
-// unset($invoice1);
+$unpacking->OldUnpacking();
 
-// var_dump($invoice2);
+$unpacking->NewUnpacking();
+
+echo 'New Keywods Initializer'.PHP_EOL;
+
+$customer = New Customer();
+var_dump($customer);
+
+$newCustomer = new NewCustomer();
+var_dump($newCustomer);
 
 
-// for WeakMap
+echo 'Final Const'.PHP_EOL;
 
-$map = new WeakMap();
-$map[$invoice1]= ['a'=>1, 'b'=>2,'c'=>3];
-
-var_dump($map);
-
-
-unset($invoice1);
-var_dump($map);
+echo InvoiceQuery::DEFAULT_LIMIT.PHP_EOL;
