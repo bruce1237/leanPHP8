@@ -1,0 +1,8 @@
+WeakMap is map (or dictionary) that accepts objects as key. 
+However, unlike the otherwise similar SplObjectStorage, an object in a key of WeakMap does not contribute toward the object's reference count.
+That is, if at any point the only remaining reference to an object is the key of a weakMpa, the object will be garbage collected
+and removed from the weakMap.
+its primary use case is for building caches of data derived from an object that do not need to live longer than the object.
+
+WeakMap implements ArrayAccess, Iterator, and countable, so in most cases it can be used 
+in the same fashion as an associative array.
