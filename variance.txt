@@ -1,1 +1,4 @@
 Liskov Substitution Principle (LSP)
+* if it looks like a DUCK, quacks like a DUCK, but needs Batteries, -- you probably need a better Abstraction
+
+> An object and a sub-object or a Class and a Sub-class must be interchangeable without breaking the code
