@@ -1,0 +1,17 @@
+Attributes overview (PHP8)
+
+Attributes offer the ability to add structured, machine-readable metadata information on 
+declarations in code: classes, methods, functions, parameters, properties and class constants 
+can be the target of an attribute.
+
+the metadata defined by attributes can then be inspected at runtime using the Reflection APIs.
+
+Attributes could therefore be thought of as a configuration language embedded directly into code.
+
+With attributes the generic implementation of a feature and its concrete use in an application
+can be decoupled. in a way it is comparable to interfaces and their implementations. 
+But where interfaces and implementations are about code, attributes are about annotating extra 
+information and configuration.
+
+interfaces can be implemented by classes, yet attributes can also be declared on methods, 
+function, parameters, properties and class constants. As such they are more flexible than interfaces.
