@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "app\\": "src/app/",
-            "lib\\": "src/lib/"
+            "lib\\": "src/lib/",
+            "enums\\": "src/enums"
         }
     },
     "require": {}
