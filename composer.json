@@ -2,7 +2,9 @@
     "name": "bo/learn-php8",
     "autoload": {
         "psr-4": {
-            "app\\": "src/app/"
+            "app\\": "src/app/",
+            "controller\\": "src/app/controllers/",
+            "view\\": "src/app/view/"
         }
     },
     "authors": [{

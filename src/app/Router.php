@@ -3,10 +3,30 @@
 namespace app;
 
 use Exception;
+use ReflectionClass;
 
 class Router
 {
     private array $routers = [];
+
+
+    public function registerRoutesFromControllerAttributes(array $controllers)
+    {
+        foreach($controllers as $controller){
+            $reflectionController = new ReflectionClass($controller);
+
+            foreach($reflectionController->getMethods() as $method){
+                $attributes = $method->getAttributes(Router::class);
+                
+                foreach($attributes as $attribute){
+                    $route = $attribute->newInstance();
+                    $this->register($route->method, $route->routePath, [$controller, $method->getName()]);
+
+                }
+            }
+        }
+        
+    }
 
     public function register(string $requestMethod, string $route, callable|array $action): self
     {
@@ -31,6 +51,10 @@ class Router
 
     public function resolve(string $requestUri, string $requestMethod)
     {
+
+        // var_dump($requestUri);
+        // var_dump($requestMethod);
+        // die('CCC');
         $route = explode('?', $requestUri)[0];
         $action = $this->routers[$requestMethod][$route] ?? null;
 
@@ -55,4 +79,6 @@ class Router
         }
         throw new \Exception("Route Not Found ");
     }
+
+
 }
